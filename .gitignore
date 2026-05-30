@@ -1,0 +1,16 @@
+﻿node_modules/
+.next/
+.env*.local
+.env
+.DS_Store
+*.log
+.vercel
+.vscode/
+.idea/
+coverage/
+dist/
+build/
+*.mp4
+*.mov
+*.webm
+public/videos/
