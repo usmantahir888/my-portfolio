@@ -13,180 +13,189 @@ export default function Hero() {
   return (
     <motion.section
       id="home"
-      className="min-h-screen flex items-center pt-[100px]"
+      className="min-h-screen flex items-center pt-[100px] bg-[#0a0a0c] relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Background Matrix/Grid Elements for Premium Look */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808005_1px,transparent_1px),linear-gradient(to_bottom,#80808005_1px,transparent_1px)] bg-[size:40px_40px]" />
+      
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
+          
+          {/* Left Content Column */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="mb-2"
+              className="mb-4"
             >
-              <span className="text-[#6c47ff] font-medium text-xs uppercase tracking-wide">
-                Welcome to My Portfolio
+              <span className="text-xs font-bold tracking-[0.25em] text-[#6c47ff] uppercase bg-[#6c47ff]/10 px-3 py-1 rounded-sm border border-[#6c47ff]/20">
+                Available For Work
               </span>
             </motion.div>
 
+            {/* Main Title Name */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2"
+              className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-4"
             >
-              <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                Asnan Ali
+              <span className="bg-gradient-to-r from-white via-gray-200 to-gray-500 bg-clip-text text-transparent">
+                Muhammad Usman Tahir
               </span>
             </motion.h1>
 
+            {/* Profession / Role */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="mb-3"
+              className="mb-4"
             >
-              <h2 className="text-lg md:text-xl text-gray-300 font-normal">
-                Full-Stack Developer specializing in{" "}
-                <span className="text-[#6c47ff] font-medium">React & React Native</span>
+              <h2 className="text-xl md:text-2xl text-gray-300 font-medium tracking-tight">
+                Mobile Developer &{" "}
+                <span className="bg-gradient-to-r from-[#4dffb8] to-cyan-400 bg-clip-text text-transparent font-bold">
+                  Graphic Designer
+                </span>
               </h2>
             </motion.div>
 
+            {/* Description Paragraph */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-gray-400 mb-4 text-sm leading-relaxed max-w-lg"
+              className="text-gray-400 mb-6 text-sm md:text-base leading-relaxed max-w-lg font-normal"
             >
-              I build high-performance web and mobile applications using React, React Native, 
-              and Shopify. With expertise in Figma design, I create seamless user experiences 
-              from concept to deployment.
+              Engineering premium cross-platform software deployments alongside interactive vector branding systems. Specializing in high-fidelity interface layouts and optimized native layers.
             </motion.p>
 
-            {/* Skills Tags */}
+            {/* Premium Synchronized Skill Tags */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.55 }}
-              className="flex flex-wrap gap-1.5 mb-4"
+              className="flex flex-wrap gap-2 mb-8"
             >
-              <span className="px-2.5 py-0.5 bg-[#6c47ff]/20 text-[#6c47ff] text-[11px] rounded-full border border-[#6c47ff]/30">React</span>
-              <span className="px-2.5 py-0.5 bg-[#ff4d8c]/20 text-[#ff4d8c] text-[11px] rounded-full border border-[#ff4d8c]/30">React Native</span>
-              <span className="px-2.5 py-0.5 bg-[#4dffb8]/20 text-[#4dffb8] text-[11px] rounded-full border border-[#4dffb8]/30">Shopify</span>
-              <span className="px-2.5 py-0.5 bg-[#ffaa4d]/20 text-[#ffaa4d] text-[11px] rounded-full border border-[#ffaa4d]/30">Figma</span>
-              <span className="px-2.5 py-0.5 bg-purple-500/20 text-purple-400 text-[11px] rounded-full border border-purple-500/30">Next.js</span>
-              <span className="px-2.5 py-0.5 bg-blue-500/20 text-blue-400 text-[11px] rounded-full border border-blue-500/30">TypeScript</span>
+              <span className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs font-semibold rounded-md border border-cyan-500/20">React</span>
+              <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-semibold rounded-md border border-blue-500/20">React Native CLI</span>
+              <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-semibold rounded-md border border-emerald-500/20">Graphic Design</span>
+              <span className="px-3 py-1 bg-orange-500/10 text-orange-400 text-xs font-semibold rounded-md border border-orange-500/20">Figma UI/UX</span>
+              <span className="px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-semibold rounded-md border border-purple-500/20">Next.js</span>
+              <span className="px-3 py-1 bg-indigo-500/10 text-indigo-400 text-xs font-semibold rounded-md border border-indigo-500/20">TypeScript</span>
             </motion.div>
 
-            {/* Stats */}
+            {/* Professional Clean Matrix Metrics (Stats) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex gap-5 mb-5"
+              className="flex gap-8 mb-8 border-t border-white/[0.04] pt-6"
             >
               <div>
-                <div className="text-xl font-bold text-white">50+</div>
-                <div className="text-[10px] text-gray-500">Projects</div>
+                <div className="text-2xl font-black text-white tracking-tight">50+</div>
+                <div className="text-xs text-gray-500 font-medium uppercase tracking-widest mt-0.5">Deployments</div>
               </div>
               <div>
-                <div className="text-xl font-bold text-white">30+</div>
-                <div className="text-[10px] text-gray-500">Happy Clients</div>
+                <div className="text-2xl font-black text-white tracking-tight">30+</div>
+                <div className="text-xs text-gray-500 font-medium uppercase tracking-widest mt-0.5">Global Clients</div>
               </div>
               <div>
-                <div className="text-xl font-bold text-white">2+</div>
-                <div className="text-[10px] text-gray-500">Years Exp</div>
+                <div className="text-2xl font-black text-white tracking-tight">2+</div>
+                <div className="text-xs text-gray-500 font-medium uppercase tracking-widest mt-0.5">Years Verified</div>
               </div>
             </motion.div>
 
-            {/* Buttons with Pop-up Effects */}
+            {/* Interactive Functional CTA Actions */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.65 }}
-              className="flex gap-3 flex-wrap"
+              className="flex gap-4 flex-wrap"
             >
               <motion.button
-                onClick={() => scrollToSection("blog")}
+                onClick={() => scrollToSection("service")}
                 whileHover={{ 
-                  scale: 1.1,
-                  boxShadow: "0 0 20px rgba(108, 71, 255, 0.5)"
+                  scale: 1.03,
+                  boxShadow: "0 0 25px rgba(108, 71, 255, 0.4)"
                 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                className="px-5 py-2 bg-gradient-to-r from-[#6c47ff] to-[#ff4d8c] rounded-full font-medium text-xs text-white cursor-pointer hover:shadow-lg hover:shadow-purple-500/50 transition-all"
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                className="px-6 py-3 bg-gradient-to-r from-[#6c47ff] to-[#ff4d8c] rounded-xl font-bold text-xs tracking-wider uppercase text-white cursor-pointer transition-all"
               >
-                View My Work
+                Explore Capabilities
               </motion.button>
 
               <motion.button
                 onClick={() => scrollToSection("contact")}
                 whileHover={{ 
-                  scale: 1.1,
-                  boxShadow: "0 0 20px rgba(108, 71, 255, 0.5)"
+                  scale: 1.03,
+                  backgroundColor: "rgba(108, 71, 255, 0.12)",
+                  borderColor: "rgba(108, 71, 255, 1)"
                 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                className="px-5 py-2 border border-[#6c47ff] rounded-full font-medium text-xs text-white cursor-pointer hover:bg-[#6c47ff]/10 transition-all flex items-center gap-1.5"
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                className="px-6 py-3 border border-white/[0.1] rounded-xl font-bold text-xs tracking-wider uppercase text-white cursor-pointer transition-all flex items-center gap-2"
               >
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                <svg className="w-4 h-4 text-[#6c47ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
-                Contact Me
+                Initiate Brief
               </motion.button>
             </motion.div>
           </motion.div>
 
-          {/* Right Content - Your Picture with Glow Only Inside Circle */}
+          {/* Right Content Column: Image Wrapper with High-End Glowing Accents */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             className="relative flex justify-center"
           >
-            {/* Image Container with Border Glow */}
-            <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden shadow-xl">
-              {/* Inner Glow Effect - Only on the circle border */}
-              <div className="absolute inset-0 rounded-full ring-2 ring-[#6c47ff]/40 ring-offset-0 ring-offset-transparent" />
-              <div className="absolute inset-0 rounded-full ring-4 ring-[#ff4d8c]/20 ring-offset-0 ring-offset-transparent" />
-              <div className="absolute inset-0 rounded-full ring-8 ring-[#4dffb8]/10 ring-offset-0 ring-offset-transparent" />
+            {/* Main Interactive Round Container */}
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border border-white/[0.08] shadow-2xl bg-[#111115]">
+              {/* Complex Vector Radial Border Rings for Tech Aesthetic */}
+              <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-white/[0.1] z-20 pointer-events-none" />
+              <div className="absolute inset-0 rounded-full ring-2 ring-[#6c47ff]/30 ring-offset-0 ring-offset-transparent pointer-events-none" />
+              <div className="absolute inset-0 rounded-full ring-4 ring-[#ff4d8c]/15 pointer-events-none" />
               
               <img
-                src="/abcc.png"
-                alt="Asnan Ali"
-                className="w-full h-full object-cover"
+                src="/my pic.jpeg"
+                alt="Muhammad Usman Tahir"
+                className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500"
               />
             </div>
 
-            {/* Decorative neon circles around */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-[#6c47ff] rounded-full opacity-15 blur-2xl animate-pulse" />
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-[#ff4d8c] rounded-full opacity-15 blur-2xl animate-pulse" />
-            <div className="absolute top-1/2 -right-6 w-14 h-14 bg-[#4dffb8] rounded-full opacity-15 blur-xl animate-pulse" />
+            {/* High-Definition Cyber Ambient Glow Clusters */}
+            <div className="absolute -top-6 -right-6 w-32 h-32 bg-[#6c47ff]/10 rounded-full blur-3xl animate-pulse pointer-events-none" />
+            <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-[#ff4d8c]/10 rounded-full blur-3xl animate-pulse pointer-events-none" />
+            <div className="absolute top-1/3 -right-8 w-24 h-24 bg-[#4dffb8]/10 rounded-full blur-2xl animate-pulse pointer-events-none" />
             
-            {/* Floating skill badges */}
+            {/* Dynamic Floating Badges instead of basic blocks */}
             <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="absolute -top-8 left-4 bg-black/80 backdrop-blur-sm px-2.5 py-1 rounded-full text-[10px] font-semibold text-[#6c47ff] border border-[#6c47ff]/30"
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -top-4 left-2 bg-[#111115]/90 backdrop-blur-md px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest text-cyan-400 border border-cyan-500/20 shadow-lg"
             >
-              React Expert
+              Native Engineer
             </motion.div>
             <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 3.5, repeat: Infinity, delay: 0.5 }}
-              className="absolute -bottom-8 right-4 bg-black/80 backdrop-blur-sm px-2.5 py-1 rounded-full text-[10px] font-semibold text-[#ff4d8c] border border-[#ff4d8c]/30"
+              animate={{ y: [0, 6, 0] }}
+              transition={{ duration: 4.5, repeat: Infinity, delay: 0.5, ease: "easeInOut" }}
+              className="absolute -bottom-4 right-2 bg-[#111115]/90 backdrop-blur-md px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest text-[#emerald-400] text-emerald-400 border border-emerald-500/20 shadow-lg"
             >
-              Shopify Pro
+              Creative Designer
             </motion.div>
           </motion.div>
+
         </div>
       </div>
     </motion.section>

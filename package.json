@@ -12,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/swc-win32-x64-msvc": "^16.2.6",
     "@react-spring/web": "^9.7.3",
     "@react-three/drei": "^9.88.0",
     "@react-three/fiber": "^8.15.9",

@@ -9,13 +9,14 @@ export default function About() {
   const skills = [
     { name: "React", level: 95, color: "from-cyan-500 to-blue-500" },
     { name: "React Native", level: 90, color: "from-blue-500 to-indigo-500" },
-    { name: "Shopify", level: 88, color: "from-green-500 to-emerald-500" },
+    { name: "Graphic Design", level: 88, color: "from-green-500 to-emerald-500" },
     { name: "Figma", level: 92, color: "from-orange-500 to-red-500" },
   ];
 
   return (
     <section id="about" className="py-20 bg-black/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -30,11 +31,13 @@ export default function About() {
             </span>
           </h2>
           <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-            Passionate developer with 2+ years of experience
+            Passionate Mobile Developer & Graphic Designer with 2+ years of experience
           </p>
         </motion.div>
 
+        {/* Two Column Content Grid */}
         <div className="grid md:grid-cols-2 gap-12">
+          {/* Left Column: Biography & Stats */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -42,15 +45,13 @@ export default function About() {
           >
             <h3 className="text-xl font-semibold mb-3">Who am I?</h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-3">
-              I'm a Full-Stack Developer with over 2+ years of experience in creating 
-              beautiful and functional web & mobile applications.
+              I'm <strong>Muhammad Usman Tahir</strong>, a passionate Mobile Developer and Graphic Designer with over 3+ years of experience in creating beautiful, user-centric interfaces and highly functional applications.
             </p>
             <p className="text-gray-400 text-sm leading-relaxed mb-5">
-              My approach combines creative design with technical expertise to 
-              deliver solutions that perform exceptionally well. I specialize in 
-              React, React Native, and Shopify development.
+              My approach combines creative design instincts with strong technical expertise to deliver solutions that perform exceptionally well. I specialize in React, React Native, and high-fidelity Graphic Design.
             </p>
             
+            {/* Stats Bullet Points */}
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm">
                 <div className="w-1.5 h-1.5 bg-[#6c47ff] rounded-full" />
@@ -67,6 +68,7 @@ export default function About() {
             </div>
           </motion.div>
 
+          {/* Right Column: Animated Skills Bars */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -76,11 +78,14 @@ export default function About() {
             <div className="space-y-4">
               {skills.map((skill, index) => (
                 <div key={index}>
+                  {/* Skill Label and Percentage */}
                   <div className="flex justify-between mb-1">
                     <span className="text-gray-300 text-sm">{skill.name}</span>
                     <span className="text-[#6c47ff] text-sm">{skill.level}%</span>
                   </div>
+                  {/* Progress Bar Container */}
                   <div className="h-1.5 bg-gray-700 rounded-full overflow-hidden">
+                    {/* Animated Progress Bar Fill */}
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}

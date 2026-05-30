@@ -6,63 +6,51 @@ import Link from "next/link";
 
 const services = [
   {
-    icon: "⚛️",
+    tag: "WEB CORE",
     title: "React Development",
-    description: "Building fast, interactive, and scalable web applications with React.js",
-    color: "from-cyan-400 to-blue-500",
-    bgColor: "bg-cyan-500/10",
-    borderColor: "border-cyan-500/30",
-    glowColor: "shadow-cyan-500/50",
+    description: "Architecting high-performance, interactive enterprise web architectures using concurrent rendering and optimized state management.",
+    color: "from-cyan-500 via-blue-500 to-indigo-600",
+    glowColor: "rgba(6, 182, 212, 0.15)",
     link: "/services/react",
   },
   {
-    icon: "📱",
-    title: "React Native",
-    description: "Cross-platform mobile apps for iOS and Android using React Native",
-    color: "from-blue-400 to-indigo-500",
-    bgColor: "bg-blue-500/10",
-    borderColor: "border-blue-500/30",
-    glowColor: "shadow-blue-500/50",
+    tag: "MOBILE NATIVE",
+    title: "React Native CLI",
+    description: "Developing cross-platform iOS and Android deployments with high-fidelity custom UI layouts and optimized native bridge bridges.",
+    color: "from-blue-500 via-indigo-500 to-purple-600",
+    glowColor: "rgba(59, 130, 246, 0.15)",
     link: "/services/react-native",
   },
   {
-    icon: "🛍️",
-    title: "Shopify Development",
-    description: "Custom Shopify stores, theme development, and app integration",
-    color: "from-green-400 to-emerald-500",
-    bgColor: "bg-green-500/10",
-    borderColor: "border-green-500/30",
-    glowColor: "shadow-green-500/50",
-    link: "/services/shopify",
+    tag: "BRANDING",
+    title: "Graphic Design",
+    description: "Crafting modern vector assets, digital marketplace visuals, cohesive identity designs, and high-impact platform covers.",
+    color: "from-emerald-400 via-teal-500 to-cyan-600",
+    glowColor: "rgba(52, 211, 153, 0.15)",
+    link: "/services/graphic-design",
   },
   {
-    icon: "🎨",
-    title: "Figma Design",
-    description: "Beautiful UI/UX designs, prototypes, and design systems in Figma",
-    color: "from-orange-400 to-red-500",
-    bgColor: "bg-orange-500/10",
-    borderColor: "border-orange-500/30",
-    glowColor: "shadow-orange-500/50",
+    tag: "INTERFACE",
+    title: "Figma UI/UX Systems",
+    description: "Designing advanced component libraries, interactive high-fidelity user journeys, and robust scalable design tokens.",
+    color: "from-orange-500 via-red-500 to-pink-600",
+    glowColor: "rgba(249, 115, 22, 0.15)",
     link: "/services/figma",
   },
   {
-    icon: "⚡",
-    title: "Performance Optimization",
-    description: "Lightning-fast websites with optimized code and best practices",
-    color: "from-purple-400 to-pink-500",
-    bgColor: "bg-purple-500/10",
-    borderColor: "border-purple-500/30",
-    glowColor: "shadow-purple-500/50",
+    tag: "OPTIMIZATION",
+    title: "Performance & SEO",
+    description: "Maximizing Core Web Vitals with optimized chunk splits, server-side asset tuning, and flawless multi-device metrics.",
+    color: "from-purple-500 via-pink-500 to-rose-600",
+    glowColor: "rgba(168, 85, 247, 0.15)",
     link: "/services/performance",
   },
   {
-    icon: "🚀",
-    title: "Full-Stack Development",
-    description: "End-to-end development from database to deployment",
-    color: "from-teal-400 to-green-500",
-    bgColor: "bg-teal-500/10",
-    borderColor: "border-teal-500/30",
-    glowColor: "shadow-teal-500/50",
+    tag: "FULL REAP",
+    title: "Full-Stack Engineering",
+    description: "Integrating powerful Python backends and structured Firebase/Firestore data layers with pixel-perfect client presentation.",
+    color: "from-teal-400 via-emerald-500 to-green-600",
+    glowColor: "rgba(45, 212, 191, 0.15)",
     link: "/services/full-stack",
   },
 ];
@@ -71,98 +59,99 @@ export default function Services() {
   const ref = useRef(null);
 
   return (
-    <section id="service" className="py-20 relative overflow-hidden">
-      {/* Background animated gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/5 via-transparent to-pink-900/5" />
+    <section id="service" className="py-24 bg-[#0a0a0c] relative overflow-hidden">
+      {/* Premium subtle mesh grid elements */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:40px_40px]" />
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-500/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-blue-500/5 blur-[150px] rounded-full pointer-events-none" />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        
+        {/* Header Section */}
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
         >
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="inline-block mb-4"
-          >
-            <span className="px-4 py-1 rounded-full bg-gradient-to-r from-[#6c47ff]/20 to-[#ff4d8c]/20 text-[#6c47ff] text-xs font-semibold border border-[#6c47ff]/30">
-              What I Offer
-            </span>
-          </motion.div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold mb-3">
-            My{" "}
-            <span className="bg-gradient-to-r from-[#6c47ff] via-[#ff4d8c] to-[#4dffb8] bg-clip-text text-transparent animate-gradient">
+          <span className="text-xs font-bold tracking-[0.25em] text-[#6c47ff] uppercase bg-[#6c47ff]/10 px-4 py-1.5 rounded-sm border border-[#6c47ff]/20">
+            Expertise Matrix
+          </span>
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-white mt-6 mb-4">
+            Professional{" "}
+            <span className="bg-gradient-to-r from-[#6c47ff] via-[#ff4d8c] to-[#4dffb8] bg-clip-text text-transparent">
               Services
             </span>
           </h2>
-          <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-            Transforming ideas into exceptional digital experiences
+          <p className="text-gray-500 text-base max-w-xl mx-auto font-medium">
+            Engineered solutions bridging high-end design aesthetics with modular software architectures.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Bento/Modern Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Link href={service.link} key={index} className="block">
+            <Link href={service.link} key={index} className="block group">
               <motion.div
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ 
-                  scale: 1.05, 
-                  y: -8,
-                  transition: { type: "spring", stiffness: 300 }
-                }}
-                className={`group relative bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm rounded-2xl p-6 border ${service.borderColor} hover:border-opacity-100 transition-all duration-300 cursor-pointer overflow-hidden`}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                whileHover={{ y: -4 }}
+                style={{
+                  '--glow-color': service.glowColor
+                } as React.CSSProperties}
+                className="relative h-full bg-[#111115] border border-white/[0.06] hover:border-white/[0.15] rounded-xl p-8 transition-all duration-300 overflow-hidden flex flex-col justify-between group-hover:shadow-[0_0_30px_rgba(0,0,0,0.5)]"
               >
-                {/* Animated background on hover */}
-                <div className={`absolute inset-0 ${service.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-                
-                {/* Glow effect */}
-                <div className={`absolute -inset-1 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500`} />
-                
-                {/* Icon Container with Animation */}
-                <motion.div
-                  whileHover={{ rotate: 360, scale: 1.1 }}
-                  transition={{ duration: 0.5 }}
-                  className={`relative w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center text-3xl mb-5 shadow-lg ${service.glowColor} group-hover:shadow-2xl transition-all duration-300`}
-                >
-                  <span className="filter drop-shadow-lg">{service.icon}</span>
-                </motion.div>
-                
-                {/* Title with gradient on hover */}
-                <h3 className={`text-xl font-bold mb-3 text-white group-hover:bg-gradient-to-r ${service.color} group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300`}>
-                  {service.title}
-                </h3>
-                
-                {/* Description */}
-                <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
-                  {service.description}
-                </p>
-                
-                {/* Animated underline on hover */}
-                <motion.div
-                  className={`h-0.5 bg-gradient-to-r ${service.color} rounded-full mt-4`}
-                  initial={{ width: 0 }}
-                  whileHover={{ width: "100%" }}
-                  transition={{ duration: 0.3 }}
+                {/* Ambient Soft Glow Effect */}
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none mix-blend-screen"
+                  style={{
+                    background: `radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), var(--glow-color), transparent 40%)`
+                  }}
                 />
-                
-                {/* Arrow icon that appears on hover */}
-                <motion.div
-                  initial={{ opacity: 0, x: -10 }}
-                  whileHover={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="absolute bottom-6 right-6"
-                >
-                  <svg className="w-5 h-5 text-white/50 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+
+                <div>
+                  {/* Service Functional Tag */}
+                  <div className="flex items-center justify-between mb-8">
+                    <span className={`text-[10px] font-bold tracking-widest text-transparent bg-gradient-to-r ${service.color} bg-clip-text uppercase`}>
+                      {service.tag}
+                    </span>
+                    
+                    {/* Minimal Technical Line Accent */}
+                    <div className="w-12 h-[1px] bg-white/[0.08] group-hover:w-20 transition-all duration-500" />
+                  </div>
+                  
+                  {/* Service Title */}
+                  <h3 className="text-xl font-bold text-white tracking-tight mb-3 transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  
+                  {/* Service Description */}
+                  <p className="text-gray-400 text-sm font-normal leading-relaxed mb-6">
+                    {service.description}
+                  </p>
+                </div>
+
+                {/* Card Interactive Footer */}
+                <div className="flex items-center gap-2 pt-4 border-t border-white/[0.03] mt-auto">
+                  <span className="text-xs font-semibold text-gray-500 group-hover:text-white transition-colors duration-300">
+                    Explore Capabilities
+                  </span>
+                  <svg 
+                    className="w-4 h-4 text-gray-500 transform -translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                   </svg>
-                </motion.div>
+                </div>
+
+                {/* Subtle Linear Edge Gradient */}
+                <div className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r ${service.color} scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
               </motion.div>
             </Link>
           ))}
