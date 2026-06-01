@@ -23,7 +23,7 @@ export default function Navbar() {
   // Sync active navigation items accurately matching page view thresholds
   useEffect(() => {
     if (pathname === "/") {
-      const sections = ["home", "about", "service", "blog", "contact"];
+      const sections = ["home", "about", "service", "project", "contact"];
       const scrollPosition = window.scrollY + 120;
       
       for (const section of sections) {
@@ -48,7 +48,7 @@ export default function Navbar() {
     { name: "Home", href: "/", section: "home" },
     { name: "About", href: "/#about", section: "about" },
     { name: "Service", href: "/#service", section: "service" },
-    { name: "Blog", href: "/#blog", section: "blog" },
+    { name: "Projects", href: "/#project", section: "project" },
     { name: "Contact", href: "/#contact", section: "contact" },
   ];
 
@@ -79,7 +79,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? "bg-[#0a0a0c]/80 backdrop-blur-xl py-4 border-b border-white/[0.04] shadow-[0_4px_30px_rgba(0,0,0,0.4)]" 
+          ? "bg-[#0a0a0c]/85 backdrop-blur-xl py-4 border-b border-white/[0.04] shadow-[0_4px_30px_rgba(0,0,0,0.5)]" 
           : "bg-transparent py-6 border-b border-transparent"
       }`}
     >
@@ -110,17 +110,17 @@ export default function Navbar() {
               >
                 <span className={`relative z-10 transition-colors duration-300 ${
                   activeItem === item.name 
-                    ? "text-white" 
+                    ? "text-white font-extrabold" 
                     : "text-gray-500 hover:text-white"
                 }`}>
                   {item.name}
                 </span>
                 
-                {/* Clean Pill Active Element Instead of standard Underlines */}
+                {/* Ultra Prominent High-End Active Pill Indicator */}
                 {activeItem === item.name && (
                   <motion.div
                     layoutId="navbar-active-pill"
-                    className="absolute inset-0 bg-white/[0.05] border border-white/[0.08] rounded-full"
+                    className="absolute inset-0 bg-white/[0.08] border border-white/[0.15] shadow-[0_0_15px_rgba(255,255,255,0.03)] rounded-full"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -128,7 +128,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Functional Clean Action Trigger CTA */}
+          {/* Updated Action Trigger CTA to "Get in Touch" */}
           <div className="hidden md:block">
             <Link href="/#contact">
               <motion.button
@@ -136,9 +136,8 @@ export default function Navbar() {
                 whileTap={{ scale: 0.98 }}
                 className="relative px-5 py-2 rounded-xl font-bold text-[10px] tracking-widest uppercase text-white overflow-hidden bg-[#111115] border border-white/[0.08] hover:border-[#6c47ff]/40 transition-all duration-300 shadow-md group"
               >
-                {/* Internal Glow Node */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#6c47ff]/10 to-[#ff4d8c]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="relative z-10">Initiate Brief</span>
+                <span className="relative z-10">Get in Touch</span>
               </motion.button>
             </Link>
           </div>
@@ -174,7 +173,7 @@ export default function Navbar() {
                   href={item.href}
                   className={`block px-4 py-2.5 rounded-lg text-xs font-bold tracking-wide uppercase transition-colors ${
                     activeItem === item.name
-                      ? "text-white bg-white/[0.04]"
+                      ? "text-white bg-white/[0.08] font-extrabold border border-white/[0.05]"
                       : "text-gray-400 hover:text-white hover:bg-white/[0.02]"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
@@ -185,7 +184,7 @@ export default function Navbar() {
               <div className="h-[1px] bg-white/[0.04] my-2" />
               <Link href="/#contact" onClick={() => setMobileMenuOpen(false)}>
                 <button className="w-full px-4 py-3 bg-gradient-to-r from-[#6c47ff] to-[#ff4d8c] text-white text-xs font-bold tracking-widest uppercase rounded-lg shadow-lg">
-                  Initiate Brief
+                  Get in Touch
                 </button>
               </Link>
             </motion.div>

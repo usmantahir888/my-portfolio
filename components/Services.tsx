@@ -38,12 +38,12 @@ const services = [
     link: "/services/figma",
   },
   {
-    tag: "OPTIMIZATION",
-    title: "Performance & SEO",
-    description: "Maximizing Core Web Vitals with optimized chunk splits, server-side asset tuning, and flawless multi-device metrics.",
+    tag: "POST PRODUCTION",
+    title: "Video Editing",
+    description: "Simple video editor with hands-on experience on CapCut and InShot.",
     color: "from-purple-500 via-pink-500 to-rose-600",
     glowColor: "rgba(168, 85, 247, 0.15)",
-    link: "/services/performance",
+    link: "/services/video-editing",
   },
   {
     tag: "FULL REAP",
@@ -113,7 +113,7 @@ export default function Services() {
                   }}
                 />
 
-                <div>
+                <div className="w-full">
                   {/* Service Functional Tag */}
                   <div className="flex items-center justify-between mb-8">
                     <span className={`text-[10px] font-bold tracking-widest text-transparent bg-gradient-to-r ${service.color} bg-clip-text uppercase`}>
@@ -130,24 +130,9 @@ export default function Services() {
                   </h3>
                   
                   {/* Service Description */}
-                  <p className="text-gray-400 text-sm font-normal leading-relaxed mb-6">
+                  <p className="text-gray-400 text-sm font-normal leading-relaxed">
                     {service.description}
                   </p>
-                </div>
-
-                {/* Card Interactive Footer */}
-                <div className="flex items-center gap-2 pt-4 border-t border-white/[0.03] mt-auto">
-                  <span className="text-xs font-semibold text-gray-500 group-hover:text-white transition-colors duration-300">
-                    Explore Capabilities
-                  </span>
-                  <svg 
-                    className="w-4 h-4 text-gray-500 transform -translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                  </svg>
                 </div>
 
                 {/* Subtle Linear Edge Gradient */}

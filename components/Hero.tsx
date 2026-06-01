@@ -61,7 +61,7 @@ export default function Hero() {
               className="mb-4"
             >
               <h2 className="text-xl md:text-2xl text-gray-300 font-medium tracking-tight">
-                Mobile Developer &{" "}
+                Mobile App Specialist &{" "}
                 <span className="bg-gradient-to-r from-[#4dffb8] to-cyan-400 bg-clip-text text-transparent font-bold">
                   Graphic Designer
                 </span>
@@ -93,7 +93,7 @@ export default function Hero() {
               <span className="px-3 py-1 bg-indigo-500/10 text-indigo-400 text-xs font-semibold rounded-md border border-indigo-500/20">TypeScript</span>
             </motion.div>
 
-            {/* Professional Clean Matrix Metrics (Stats) */}
+            {/* Professional Clean Matrix Metrics (Stats) - Updated to Years Experience */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -109,8 +109,8 @@ export default function Hero() {
                 <div className="text-xs text-gray-500 font-medium uppercase tracking-widest mt-0.5">Global Clients</div>
               </div>
               <div>
-                <div className="text-2xl font-black text-white tracking-tight">2+</div>
-                <div className="text-xs text-gray-500 font-medium uppercase tracking-widest mt-0.5">Years Verified</div>
+                <div className="text-2xl font-black text-white tracking-tight">3+</div>
+                <div className="text-xs text-gray-500 font-medium uppercase tracking-widest mt-0.5">Years Experience</div>
               </div>
             </motion.div>
 
@@ -148,7 +148,7 @@ export default function Hero() {
                 <svg className="w-4 h-4 text-[#6c47ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
-                Initiate Brief
+                Get in Touch
               </motion.button>
             </motion.div>
           </motion.div>
@@ -190,7 +190,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, 6, 0] }}
               transition={{ duration: 4.5, repeat: Infinity, delay: 0.5, ease: "easeInOut" }}
-              className="absolute -bottom-4 right-2 bg-[#111115]/90 backdrop-blur-md px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest text-[#emerald-400] text-emerald-400 border border-emerald-500/20 shadow-lg"
+              className="absolute -bottom-4 right-2 bg-[#111115]/90 backdrop-blur-md px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest text-emerald-400 border border-emerald-500/20 shadow-lg"
             >
               Creative Designer
             </motion.div>

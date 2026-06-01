@@ -9,7 +9,7 @@ export default function About() {
   const skills = [
     { name: "React", level: 95, color: "from-cyan-500 to-blue-500" },
     { name: "React Native", level: 90, color: "from-blue-500 to-indigo-500" },
-    { name: "Graphic Design", level: 88, color: "from-green-500 to-emerald-500" },
+    { name: "Graphic Design", level: 100, color: "from-green-500 to-emerald-500" },
     { name: "Figma", level: 92, color: "from-orange-500 to-red-500" },
   ];
 
@@ -31,7 +31,7 @@ export default function About() {
             </span>
           </h2>
           <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-            Passionate Mobile Developer & Graphic Designer with 2+ years of experience
+            Passionate Mobile Developer & Graphic Designer with 3+ years of experience
           </p>
         </motion.div>
 
